@@ -19,6 +19,10 @@ app.use(express.urlencoded({ extended: true, limit: "50mb" })); // parse URL-enc
 
 const userRoutes = require("./routes/authRoutes");
 
+const matchRoutes = require("./routes/match.routes");
+
 app.use("/api/v1/user", userRoutes);
+
+app.use("/api/v1/match", matchRoutes);
 
 module.exports = app;

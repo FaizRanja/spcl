@@ -24,6 +24,7 @@ const getAllPredictions = async (req, res) => {
       );
 
       const matches = response.data;
+      console.log(matches);
 
       // Generate simple predictions
       const predictedMatches = matches.map((match) => {
