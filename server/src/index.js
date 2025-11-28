@@ -18,9 +18,9 @@ connectDB();
 // SYNC MODELS
 
 sequelize
-  .sync({ force: true }) // force: true deletes old tables and recreates
-  .then(() => console.log("Database synced successfully"))
-  .catch((err) => console.error("DB Sync Error:", err));
+  .sync({ force: false, alter: false }) // Data will NOT be deleted
+  .then(() => console.log("MYSQL CONNECTED SUCCESSFULLY"))
+  .catch((err) => console.log("DB ERROR:", err));
 
 // Start server
 const PORT = process.env.PORT || 3000;
